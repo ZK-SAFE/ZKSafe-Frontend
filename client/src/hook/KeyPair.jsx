@@ -10,7 +10,7 @@ import {
 import { Ed25519Keypair } from '@mysten/sui/keypairs/ed25519';
 import { SuiClient } from '@mysten/sui/client';
 
-const REDIRECT_URI = window.location.origin;
+const REDIRECT_URI = 'https://docs.sui.io';
 const CLIENT_ID = '180266593987-uvm03t52n7uf9bd7tk0q5vb6su0o9bgb.apps.googleusercontent.com';
 const FULLNODE_URL = 'https://fullnode.devnet.sui.io';
 
