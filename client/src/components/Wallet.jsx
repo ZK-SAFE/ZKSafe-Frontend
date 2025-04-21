@@ -1,4 +1,5 @@
 import { useWalletConnect } from '../hook/WalletConnect';
+import { useNavigate } from 'react-router-dom';
 
 const Wallet = () => {
   const { 
@@ -9,11 +10,17 @@ const Wallet = () => {
     isSuiWalletAvailable,
     debugWallet
   } = useWalletConnect();
+  const navigate = useNavigate();
 
   const handleWalletConnect = async () => {
     const result = await connectWallet();
     if (result.success) {
       console.log('Connected to wallet with address:', result.address);
+      
+      setTimeout(() => {
+        console.log('Navigating to dashboard...');
+        navigate('/dashboard', { replace: true });
+      }, 1000);
     } else {
       console.error('Failed to connect wallet:', result.error);
     }

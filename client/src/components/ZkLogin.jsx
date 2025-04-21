@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 import { useZkLogin } from '../hook/KeyPair';
+import { useNavigate } from 'react-router-dom';
 
 const ZkLogin = () => {
   const { initiateLogin, completeLogin } = useZkLogin();
   const [loginStatus, setLoginStatus] = useState('idle'); // 'idle', 'loading', 'success', 'error'
   const [address, setAddress] = useState(null);
+  const navigate = useNavigate();
 
   // Check for JWT in URL after redirect
   useEffect(() => {
@@ -14,6 +16,12 @@ const ZkLogin = () => {
     if (idToken) {
       setLoginStatus('success');
       console.log('JWT received:', idToken);
+      
+      // After a short delay, redirect to dashboard
+      setTimeout(() => {
+        console.log('Navigating to dashboard...');
+        navigate('/dashboard', { replace: true });
+      }, 2000);
       
       // In a real app, you would call completeLogin here with the necessary parameters
       // For example:
@@ -32,7 +40,7 @@ const ZkLogin = () => {
       //     setLoginStatus('error');
       //   });
     }
-  }, [completeLogin]);
+  }, [completeLogin, navigate]);
 
   const handleLoginClick = async () => {
     setLoginStatus('loading');
