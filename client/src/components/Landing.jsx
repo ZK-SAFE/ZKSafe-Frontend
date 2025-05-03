@@ -1,83 +1,113 @@
 import { Link } from 'react-router-dom';
+import { ConnectButton } from '@mysten/dapp-kit';
 
 const Landing = () => {
   return (
-    <div className="pt-16 min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white">
-      <div className="container mx-auto px-4 py-12">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Welcome to <span className="text-blue-400">Silent</span>Key
+    <div className="bg-white min-h-screen">
+      {/* Hero Section */}
+      <div className="container mx-auto px-4 pt-20 pb-16">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold text-blue-900 mb-6">
+            zkSafe: Privacy-First Credential Vault
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Experience the power of zero-knowledge proofs with Sui's zkLogin - a secure and private way to authenticate using your existing social accounts.
+          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            Securely store and share encrypted secrets using OAuth-based login with no need for a wallet or seed phrase.
           </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          <div className="bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-700">
-            <h2 className="text-2xl font-semibold text-white mb-4">zkLogin Authentication</h2>
-            <p className="text-gray-300 mb-6">
-              Sign in with your Google account using zero-knowledge proofs. Maintain privacy while proving your identity.
-            </p>
+          
+          {/* CTA Buttons */}
+          <div className="flex justify-center gap-4 mb-12">
+            <ConnectButton 
+              connectText="Connect Wallet"
+              className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+            />
             <Link
-              to="/zklogin"
-              className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded transition-colors"
+              to="/login"
+              className="px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition"
             >
-              Try zkLogin
+              zkLogin
             </Link>
-          </div>
-
-          <div className="bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-700">
-            <h2 className="text-2xl font-semibold text-white mb-4">Wallet Connection</h2>
-            <p className="text-gray-300 mb-6">
-              Connect your Sui wallet to interact with the blockchain. Send transactions and manage your assets.
-            </p>
             <Link
-              to="/wallet"
-              className="inline-block bg-purple-500 hover:bg-purple-600 text-white font-semibold py-2 px-6 rounded transition-colors"
+              to="/vault"
+              className="px-6 py-3 bg-blue-900 text-white rounded-lg hover:bg-blue-800 transition"
             >
-              Connect Wallet
+              Open Vault
             </Link>
           </div>
         </div>
 
-        <div className="text-center mt-8">
-          <Link
-            to="/dashboard"
-            className="inline-block bg-gray-600 hover:bg-gray-700 text-white font-semibold py-2 px-6 rounded transition-colors"
-          >
-            Go to Dashboard Directly
-          </Link>
+        {/* Features Section */}
+        <div className="grid md:grid-cols-3 gap-8 mt-16">
+          <div className="bg-blue-50 p-6 rounded-xl">
+            <h3 className="text-xl font-semibold text-blue-900 mb-3">
+              Fully On-Chain
+            </h3>
+            <p className="text-gray-600">
+              Leveraging Sui's native cryptography, object ownership, and composability.
+            </p>
+          </div>
+          
+          <div className="bg-blue-100 p-6 rounded-xl">
+            <h3 className="text-xl font-semibold text-blue-900 mb-3">
+              Privacy First
+            </h3>
+            <p className="text-gray-600">
+              Secure encryption and zero-knowledge proofs ensure your data stays private.
+            </p>
+          </div>
+          
+          <div className="bg-blue-200 p-6 rounded-xl">
+            <h3 className="text-xl font-semibold text-blue-900 mb-3">
+              Easy Access
+            </h3>
+            <p className="text-gray-600">
+              Use social login via zkLogin - no wallet or seed phrase needed.
+            </p>
+          </div>
         </div>
 
-        <div className="mt-16 text-center">
-          <h2 className="text-2xl font-semibold text-white mb-4">How It Works</h2>
-          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <div className="bg-gray-800 p-5 rounded-lg shadow-sm border border-gray-700">
-              <div className="bg-blue-900 text-blue-300 w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-4">
-                1
-              </div>
-              <h3 className="text-lg font-medium text-white mb-2">Authenticate</h3>
-              <p className="text-gray-300">
-                Sign in with your Google account using zkLogin or connect your Sui wallet.
+        {/* How It Works Section */}
+        <div className="mt-20">
+          <h2 className="text-3xl font-bold text-blue-900 text-center mb-10">
+            How It Works
+          </h2>
+          <div className="grid md:grid-cols-4 gap-6">
+            <div className="bg-white p-6 rounded-xl border border-blue-100">
+              <div className="text-blue-600 text-2xl font-bold mb-2">1</div>
+              <h4 className="text-lg font-semibold text-blue-900 mb-2">
+                Connect
+              </h4>
+              <p className="text-gray-600">
+                Use zkLogin or connect your Sui wallet
               </p>
             </div>
-            <div className="bg-gray-800 p-5 rounded-lg shadow-sm border border-gray-700">
-              <div className="bg-blue-900 text-blue-300 w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-4">
-                2
-              </div>
-              <h3 className="text-lg font-medium text-white mb-2">Generate Proof</h3>
-              <p className="text-gray-300">
-                A zero-knowledge proof is generated to verify your identity without revealing sensitive information.
+            
+            <div className="bg-white p-6 rounded-xl border border-blue-100">
+              <div className="text-blue-600 text-2xl font-bold mb-2">2</div>
+              <h4 className="text-lg font-semibold text-blue-900 mb-2">
+                Create Vault
+              </h4>
+              <p className="text-gray-600">
+                Set up your secure credential vault
               </p>
             </div>
-            <div className="bg-gray-800 p-5 rounded-lg shadow-sm border border-gray-700">
-              <div className="bg-blue-900 text-blue-300 w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-4">
-                3
-              </div>
-              <h3 className="text-lg font-medium text-white mb-2">Interact</h3>
-              <p className="text-gray-300">
-                Once authenticated, you can interact with the Sui blockchain securely.
+            
+            <div className="bg-white p-6 rounded-xl border border-blue-100">
+              <div className="text-blue-600 text-2xl font-bold mb-2">3</div>
+              <h4 className="text-lg font-semibold text-blue-900 mb-2">
+                Store Secrets
+              </h4>
+              <p className="text-gray-600">
+                Add encrypted credentials securely
+              </p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-xl border border-blue-100">
+              <div className="text-blue-600 text-2xl font-bold mb-2">4</div>
+              <h4 className="text-lg font-semibold text-blue-900 mb-2">
+                Share Safely
+              </h4>
+              <p className="text-gray-600">
+                Control access with zero-knowledge proofs
               </p>
             </div>
           </div>
