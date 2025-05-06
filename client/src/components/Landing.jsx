@@ -26,12 +26,7 @@ const Landing = () => {
             >
               zkLogin
             </Link>
-            <Link
-              to="/vault"
-              className="px-6 py-3 bg-blue-900 text-white rounded-lg hover:bg-blue-800 transition"
-            >
-              Open Vault
-            </Link>
+     
           </div>
         </div>
 
