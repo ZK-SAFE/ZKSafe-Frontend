@@ -32,12 +32,13 @@ function App() {
         <WalletProvider
         >
           <Router>
+            <div className="min-h-screen bg-white">
               <Navbar />
               <Routes>
                 <Route path="/" element={<Landing />} />
                 <Route path="/login" element={<ZkLogin />} />
               </Routes>
-        
+            </div>
             <Toaster position="top-right" />
           </Router>
         </WalletProvider>
