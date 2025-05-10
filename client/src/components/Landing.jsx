@@ -9,9 +9,9 @@ const Landing = () => {
         <div className="container mx-auto flex justify-between items-center">
           <div className="text-2xl font-bold text-blue-900">zkSafe</div>
           <div className="flex items-center space-x-6">
-            <Link to="/features" className="text-gray-600 hover:text-blue-600">Features</Link>
-            <Link to="/docs" className="text-gray-600 hover:text-blue-600">Docs</Link>
-            <Link to="/about" className="text-gray-600 hover:text-blue-600">About</Link>
+            <Link to="/vault" className="text-gray-600 hover:text-blue-600">Vault</Link>
+            <Link to="/" className="text-gray-600 hover:text-blue-600">Docs</Link>
+          
             <ConnectButton 
               connectText="Connect"
               className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition text-sm"

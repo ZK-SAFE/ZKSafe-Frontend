@@ -5,7 +5,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Landing from './components/Landing';
 import ZkLogin from './components/ZkLogin';
-
+import Vault from './components/Vault';
 
 
 import {
@@ -37,6 +37,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<Landing />} />
                 <Route path="/login" element={<ZkLogin />} />
+                <Route path="/vault" element={<Vault />} />
               </Routes>
             </div>
             <Toaster position="top-right" />
