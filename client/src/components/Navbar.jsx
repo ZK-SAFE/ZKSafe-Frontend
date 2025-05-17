@@ -31,11 +31,11 @@ const Navbar = () => {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-4">
             <Link to="/vault" className={`px-3 py-2 rounded-md text-sm ${isActive('/vault')}`}>
-              Vault
+              <button className="bg-blue-400 hover:bg-blue-500 text-white text-md text-semibold rounded-md px-4 py-2">Get Started</button>
             </Link>
-            <Link to="/login" className={`px-3 py-2 rounded-md text-sm ${isActive('/login')}`}>
+            {/* <Link to="/login" className={`px-3 py-2 rounded-md text-sm ${isActive('/login')}`}>
               zkLogin
-            </Link>
+            </Link> */}
             <div className="ml-4">
               <ConnectButton 
                 connectText="Connect Wallet"
@@ -98,13 +98,13 @@ const Navbar = () => {
           >
             Vault
           </Link>
-          <Link
+          {/* <Link
             to="/login"
             className={`block px-3 py-2 rounded-md text-base ${isActive('/login')}`}
             onClick={() => setIsMenuOpen(false)}
           >
             zkLogin
-          </Link>
+          </Link> */}
           <Link
             to="/docs"
             className={`block px-3 py-2 rounded-md text-base ${isActive('/docs')}`}

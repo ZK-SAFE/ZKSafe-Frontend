@@ -23,12 +23,13 @@ const Landing = () => {
               connectText="Connect Wallet"
               className="px-6 py-3 bg-blue-400 text-white rounded-lg hover:bg-blue-500 shadow-lg transition transform hover:scale-105"
             />
-            <Link
+            
+            {/* <Link
               to="/login"
               className="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 shadow-lg transition transform hover:scale-105"
             >
               zkLogin
-            </Link>
+            </Link> */}
           </div>
         </div>
 
