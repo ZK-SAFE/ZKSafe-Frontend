@@ -30,12 +30,12 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-4">
-            <Link to="/vault" className={`px-3 py-2 rounded-md text-sm ${isActive('/vault')}`}>
-              <button className="bg-blue-400 hover:bg-blue-500 text-white text-md text-semibold rounded-md px-4 py-2">Get Started</button>
+            <Link to="/create-vault" className={`px-3 py-2 rounded-md text-sm ${isActive('/create-vault')}`}>
+              Create Vault
             </Link>
-            {/* <Link to="/login" className={`px-3 py-2 rounded-md text-sm ${isActive('/login')}`}>
-              zkLogin
-            </Link> */}
+            <Link to="/vault" className={`px-3 py-2 rounded-md text-sm ${isActive('/vault')}`}>
+              My Vault
+            </Link>
             <div className="ml-4">
               <ConnectButton 
                 connectText="Connect Wallet"
@@ -92,25 +92,18 @@ const Navbar = () => {
             Home
           </Link>
           <Link
+            to="/create-vault"
+            className={`block px-3 py-2 rounded-md text-base ${isActive('/create-vault')}`}
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Create Vault
+          </Link>
+          <Link
             to="/vault"
             className={`block px-3 py-2 rounded-md text-base ${isActive('/vault')}`}
             onClick={() => setIsMenuOpen(false)}
           >
-            Vault
-          </Link>
-          {/* <Link
-            to="/login"
-            className={`block px-3 py-2 rounded-md text-base ${isActive('/login')}`}
-            onClick={() => setIsMenuOpen(false)}
-          >
-            zkLogin
-          </Link> */}
-          <Link
-            to="/docs"
-            className={`block px-3 py-2 rounded-md text-base ${isActive('/docs')}`}
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Docs
+            My Vault
           </Link>
         </div>
       </div>

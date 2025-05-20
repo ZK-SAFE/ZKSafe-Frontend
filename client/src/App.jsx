@@ -4,9 +4,10 @@ import './App.css';
 
 import Navbar from './components/Navbar';
 import Landing from './components/Landing';
-import ZkLogin from './components/ZkLogin';
+import CreateVault from './components/CreateVault';
+import SaveKeys from './components/SaveKeys';
 import Vault from './components/Vault';
-
+import UnlockVault from './components/UnlockVault';
 
 import {
   createNetworkConfig,
@@ -16,7 +17,6 @@ import {
 import { getFullnodeUrl } from "@mysten/sui/client";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import "@mysten/dapp-kit/dist/index.css";
-
 
 const { networkConfig } = createNetworkConfig({
   testnet: { url: getFullnodeUrl("testnet") },
@@ -29,15 +29,16 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <SuiClientProvider networks={networkConfig} defaultNetwork="testnet">
-        <WalletProvider
-        >
+        <WalletProvider>
           <Router>
-            <div className="min-h-screen bg-white">
+            <div className="min-h-screen bg-gray-900">
               <Navbar />
               <Routes>
                 <Route path="/" element={<Landing />} />
-                <Route path="/login" element={<ZkLogin />} />
+                <Route path="/create-vault" element={<CreateVault />} />
+                <Route path="/save-keys" element={<SaveKeys />} />
                 <Route path="/vault" element={<Vault />} />
+                <Route path="/unlock-vault" element={<UnlockVault />} />
               </Routes>
             </div>
             <Toaster position="top-right" />
