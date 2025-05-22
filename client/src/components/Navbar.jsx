@@ -30,11 +30,11 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-4">
+            <Link to="/vaults" className={`px-3 py-2 rounded-md text-sm ${isActive('/vaults')}`}>
+              Your Vaults
+            </Link>
             <Link to="/create-vault" className={`px-3 py-2 rounded-md text-sm ${isActive('/create-vault')}`}>
               Create Vault
-            </Link>
-            <Link to="/vault" className={`px-3 py-2 rounded-md text-sm ${isActive('/vault')}`}>
-              My Vault
             </Link>
             <div className="ml-4">
               <ConnectButton 
@@ -92,18 +92,18 @@ const Navbar = () => {
             Home
           </Link>
           <Link
+            to="/vaults"
+            className={`block px-3 py-2 rounded-md text-base ${isActive('/vaults')}`}
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Your Vaults
+          </Link>
+          <Link
             to="/create-vault"
             className={`block px-3 py-2 rounded-md text-base ${isActive('/create-vault')}`}
             onClick={() => setIsMenuOpen(false)}
           >
             Create Vault
-          </Link>
-          <Link
-            to="/vault"
-            className={`block px-3 py-2 rounded-md text-base ${isActive('/vault')}`}
-            onClick={() => setIsMenuOpen(false)}
-          >
-            My Vault
           </Link>
         </div>
       </div>

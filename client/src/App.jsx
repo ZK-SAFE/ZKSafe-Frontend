@@ -8,6 +8,7 @@ import CreateVault from './components/CreateVault';
 import SaveKeys from './components/SaveKeys';
 import Vault from './components/Vault';
 import UnlockVault from './components/UnlockVault';
+import VaultsList from './components/VaultsList';
 
 import {
   createNetworkConfig,
@@ -35,6 +36,7 @@ function App() {
               <Navbar />
               <Routes>
                 <Route path="/" element={<Landing />} />
+                <Route path="/vaults" element={<VaultsList />} />
                 <Route path="/create-vault" element={<CreateVault />} />
                 <Route path="/save-keys" element={<SaveKeys />} />
                 <Route path="/vault" element={<Vault />} />

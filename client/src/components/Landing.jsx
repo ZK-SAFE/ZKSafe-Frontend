@@ -11,7 +11,7 @@ const Landing = () => {
       <div className="flex-grow container mx-auto px-4 pt-32 pb-16">
         <div className="text-center">
           <h1 className="text-5xl font-bold text-white mb-6 mt-[120px]">
-            zkSafe: Privacy-First Credential Vault
+            ZKSafe: Privacy-First Credential Vault
           </h1>
           <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
             Securely store and share encrypted secrets using OAuth-based login with no need for a wallet or seed phrase.
@@ -140,7 +140,7 @@ const Landing = () => {
         {/* Testimonial Section */}
         <div className="mt-24 bg-gradient-to-r from-blue-400 to-blue-500 p-10 rounded-2xl shadow-xl">
           <div className="text-center">
-            <h2 className="text-3xl font-bold text-white mb-10">Why Users Trust zkSafe</h2>
+            <h2 className="text-3xl font-bold text-white mb-10">Why Users Trust ZKSafee</h2>
             <div className="flex flex-col md:flex-row justify-center gap-6 items-stretch">
               <div className="bg-white p-6 rounded-xl shadow flex-1 max-w-md mx-auto md:mx-0">
                 <p className="italic text-gray-600 mb-4">"Finally a secure solution that doesn't require me to manage complex wallets. The OAuth integration is seamless."</p>
@@ -160,7 +160,7 @@ const Landing = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <h3 className="text-xl font-bold mb-4">zkSafe</h3>
+              <h3 className="text-xl font-bold mb-4">ZKSafee</h3>
               <p className="text-gray-400">
                 The next generation of private credential management on Sui blockchain.
               </p>
@@ -184,7 +184,7 @@ const Landing = () => {
           </div>
           <div className="border-t border-gray-800 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-400 text-sm">
-              © 2024 zkSafe. All rights reserved.
+              © 2024 ZKSafee. All rights reserved.
             </div>
             <div className="flex space-x-4 mt-4 md:mt-0">
               <a href="#" className="text-gray-400 hover:text-white">
