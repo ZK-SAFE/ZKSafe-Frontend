@@ -23,7 +23,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <Link to="/" className="text-xl font-bold">
-              <span className="text-blue-400">zk</span>
+              <span className="text-blue-400">ZK</span>
               <span className="text-white">Safe</span>
             </Link>
           </div>

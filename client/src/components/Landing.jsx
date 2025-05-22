@@ -13,9 +13,7 @@ const Landing = () => {
           <h1 className="text-5xl font-bold text-white mb-6 mt-[120px]">
             ZKSafe: Privacy-First Credential Vault
           </h1>
-          <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
-            Securely store and share encrypted secrets using OAuth-based login with no need for a wallet or seed phrase.
-          </p>
+         
           
           {/* CTA Buttons */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -46,7 +44,9 @@ const Landing = () => {
               Fully On-Chain
             </h3>
             <p className="text-gray-400">
-              Leveraging Sui's native cryptography, object ownership, and composability.
+            
+Powered by Sui Move, zkSafe leverages Sui’s native object system and permissionless storage model. Every Vault is a first-class object on-chain — ownable, composable, and interoperable with the full Sui ecosystem.
+
             </p>
           </div>
           
@@ -61,7 +61,9 @@ const Landing = () => {
               Privacy First
             </h3>
             <p className="text-lg text-white">
-              Secure encryption and zero-knowledge proofs ensure your data stays private, offering industry-leading protection without compromises.
+            Vaults are locked using a simulated zero-knowledge verification pattern. Inputs are checked on-chain without revealing intent, identity, or actual values — ideal for DAO membership, secret access, and private on-chain logic.
+
+
             </p>
             <div className="mt-6">
               <Link to="/learn-more" className="inline-flex items-center text-sm font-medium text-white hover:text-gray-100">
@@ -84,7 +86,8 @@ const Landing = () => {
               Easy Access
             </h3>
             <p className="text-gray-400">
-              Use social login via zkLogin - no wallet or seed phrase needed.
+            zkSafe is compatible with Sui Wallet today — and designed to support *zkLogin. This means you’ll soon be able to unlock vaults using just your **Google, Twitter, or Apple account* with cryptographic guarantees — no wallet or seed phrases required.
+
             </p>
           </div>
         </div>
@@ -101,7 +104,8 @@ const Landing = () => {
                 Connect
               </h4>
               <p className="text-gray-400">
-                Use zkLogin or connect your Sui wallet to get started in seconds.
+              Start by connecting your Sui wallet (CLI or UI). Onboarding via zkLogin is under development.
+
               </p>
             </div>
             
@@ -111,7 +115,8 @@ const Landing = () => {
                 Create Vault
               </h4>
               <p className="text-gray-400">
-                Set up your secure credential vault with customizable options.
+              Run ⁠ create() ⁠ to generate your personal on-chain Vault. You are the sole owner. The vault starts locked.
+
               </p>
             </div>
             
@@ -121,7 +126,8 @@ const Landing = () => {
                 Store Secrets
               </h4>
               <p className="text-gray-400">
-                Add encrypted credentials securely with enhanced protection.
+              Unlock your vault by submitting a private input (vector of bytes). The ⁠ unlock() ⁠ function validates this input against an expected hash — simulating a ZK proof without revealing the data.
+
               </p>
             </div>
             
@@ -140,7 +146,7 @@ const Landing = () => {
         {/* Testimonial Section */}
         <div className="mt-24 bg-gradient-to-r from-blue-400 to-blue-500 p-10 rounded-2xl shadow-xl">
           <div className="text-center">
-            <h2 className="text-3xl font-bold text-white mb-10">Why Users Trust ZKSafee</h2>
+            <h2 className="text-3xl font-bold text-white mb-10">Why Users Trust ZKSafe</h2>
             <div className="flex flex-col md:flex-row justify-center gap-6 items-stretch">
               <div className="bg-white p-6 rounded-xl shadow flex-1 max-w-md mx-auto md:mx-0">
                 <p className="italic text-gray-600 mb-4">"Finally a secure solution that doesn't require me to manage complex wallets. The OAuth integration is seamless."</p>
@@ -160,7 +166,7 @@ const Landing = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <h3 className="text-xl font-bold mb-4">ZKSafee</h3>
+              <h3 className="text-xl font-bold mb-4">ZKSafe</h3>
               <p className="text-gray-400">
                 The next generation of private credential management on Sui blockchain.
               </p>
@@ -184,7 +190,7 @@ const Landing = () => {
           </div>
           <div className="border-t border-gray-800 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-400 text-sm">
-              © 2024 ZKSafee. All rights reserved.
+              © 2024 ZKSafe. All rights reserved.
             </div>
             <div className="flex space-x-4 mt-4 md:mt-0">
               <a href="#" className="text-gray-400 hover:text-white">
